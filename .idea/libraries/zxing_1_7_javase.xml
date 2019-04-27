@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="zxing-1.7-javase">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/QRcode/zxing-1.7-javase.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/QRcode/zxing-core-2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
