@@ -3,26 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="338a6b6e-2827-4d63-a4da-7d0026383a9b" name="Default Changelist" comment="add entities">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Invent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Invent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/OrderLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Warehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/WarehouseOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/WarehouseOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/enums/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/enums/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Greeting.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Greeting.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/table_page.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/table_page.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kursach/KursachWarehouse/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kursach/KursachWarehouse/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kursach/KursachWarehouse/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kursach/KursachWarehouse/controller/RegistrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kursach/KursachWarehouse/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kursach/KursachWarehouse/domain/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/Greeting.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Greeting.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/main.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/table_page.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/table_page.mustache" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,19 +36,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Dimgroup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/WarehouseOrder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="method#WarehouseOrder#0;class#WarehouseOrder#0" />
               </folding>
@@ -74,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/OrderLine.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="301">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="method#Line#0;class#Line#0" />
               </folding>
@@ -117,22 +94,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="148">
+              <caret line="24" column="75" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="276">
+              <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,7 +134,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,10 +181,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/QRcode/ReadQR.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/QRcode/WriteQR.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/table_page.mustache" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/chose_table_page.mustache" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/chooseTable.mustache" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/enums/UserRole.java" />
@@ -205,6 +195,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/OrderLine.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/Greeting.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/main.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/registration.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.mustache" />
       </list>
     </option>
   </component>
@@ -325,7 +317,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556620979118" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556621429407" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -394,7 +386,7 @@
       <workItem from="1556386596890" duration="3353000" />
       <workItem from="1556391676509" duration="2207000" />
       <workItem from="1556431905195" duration="285000" />
-      <workItem from="1556606536579" duration="12169000" />
+      <workItem from="1556606536579" duration="12661000" />
     </task>
     <task id="LOCAL-00001" summary="Add QrCode">
       <created>1556393791373</created>
@@ -403,11 +395,39 @@
       <option name="project" value="LOCAL" />
       <updated>1556393791374</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add entities">
+      <created>1556620859572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556620859572</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add entities">
+      <created>1556620977885</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556620977885</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add entities">
+      <created>1556620992774</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556620992774</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add entities">
+      <created>1556621003221</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556621003221</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55214000" />
+    <option name="totallyTimeSpent" value="55706000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,7 +442,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49574468" visible="true" weight="0.22995462" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49574468" visible="true" weight="0.22995462" />
       <window_info id="Structure" order="1" sideWeight="0.5042553" side_tool="true" weight="0.19894099" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -432,7 +452,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.32850242" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.78517395" weight="0.33494365" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.78441757" visible="true" weight="0.33494365" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5754148" weight="0.34961832" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -440,11 +460,11 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.21482602" side_tool="true" weight="0.33494365" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" sideWeight="0.49092284" visible="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.21558245" side_tool="true" visible="true" weight="0.33494365" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49092284" weight="0.32850242" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.698941" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -494,6 +514,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add QrCode" />
@@ -615,13 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="7" column="215" selection-start-line="7" selection-start-column="215" selection-end-line="7" selection-end-column="215" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/enums/UserRole.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -670,7 +709,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/WarehouseOrder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="method#WarehouseOrder#0;class#WarehouseOrder#0" />
           </folding>
@@ -680,7 +719,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -700,7 +739,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/OrderLine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="method#Line#0;class#Line#0" />
           </folding>
@@ -736,19 +775,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.mustache">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        <state relative-caret-position="253">
+          <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="276">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="24" column="75" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
