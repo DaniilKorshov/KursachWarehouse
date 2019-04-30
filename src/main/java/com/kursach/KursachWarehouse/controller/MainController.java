@@ -33,6 +33,10 @@ public class MainController {
         return "table_page";
     }
 
+    @GetMapping("/choose_table")
+    public String choose_table(Map<String, Object> model){
+        return "chooseTable";
+    }
 
 
 }

@@ -1,12 +1,12 @@
 package com.kursach.KursachWarehouse.domain;
 
-import com.kursach.KursachWarehouse.domain.enums.Role;
+import com.kursach.KursachWarehouse.domain.enums.UserRole;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity // This tells Hibernate to make a table out of this class
-@Table(name="usr")
+@Table(name="user")
 public class User {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -22,10 +22,10 @@ public class User {
 
     private boolean active;
 
-    @ElementCollection(targetClass = Role.class,fetch = FetchType.LAZY)
+    @ElementCollection(targetClass = UserRole.class,fetch = FetchType.LAZY)
     @CollectionTable(name="user_role",joinColumns = @JoinColumn(name="user_id"))
     @Enumerated(EnumType.STRING)
-    private Set<Role> roles;
+    private Set<UserRole> userRoles;
 
     public User() { }
 
@@ -81,11 +81,11 @@ public class User {
         this.active = active;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+    public Set<UserRole> getUserRoles() {
+        return userRoles;
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public void setUserRoles(Set<UserRole> userRoles) {
+        this.userRoles = userRoles;
     }
 }

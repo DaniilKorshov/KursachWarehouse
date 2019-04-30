@@ -1,6 +1,6 @@
 package com.kursach.KursachWarehouse.controller;
 
-import com.kursach.KursachWarehouse.domain.enums.Role;
+import com.kursach.KursachWarehouse.domain.enums.UserRole;
 import com.kursach.KursachWarehouse.domain.User;
 import com.kursach.KursachWarehouse.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +31,7 @@ public class RegistrationController {
         }
 
         user.setActive(true);
-        user.setRoles(Collections.singleton(Role.USER));
+        user.setUserRoles(Collections.singleton(UserRole.USER));
         userRepo.save(user);
         return "redirect:/login";
     }
