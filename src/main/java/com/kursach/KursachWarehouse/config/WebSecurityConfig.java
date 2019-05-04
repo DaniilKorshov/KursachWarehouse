@@ -8,6 +8,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 
+import com.kursach.KursachWarehouse.domain.enums.UserRole;
+
 import javax.sql.DataSource;
 
 @Configuration
@@ -39,6 +41,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .dataSource(dataSource)
                 .passwordEncoder(NoOpPasswordEncoder.getInstance())
                 .usersByUsernameQuery("select email,password,active from usr where email=?")
-                .authoritiesByUsernameQuery("select u.email, ur.roles from usr u inner join user_role ur on u.id=ur.user_id where u.email=?");
+                .authoritiesByUsernameQuery("select u.email,ur.user_roles from usr u inner join user_role ur on u.id=ur.user_id where u.email=?");
     }
 }

@@ -30,6 +30,10 @@ public class OrderLine {
     private boolean takeStatus=false;
     private boolean putStatus=false;
 
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    private User user;
+
 
 
     public OrderLine() {

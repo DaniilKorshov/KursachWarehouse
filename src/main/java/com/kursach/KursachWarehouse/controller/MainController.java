@@ -25,7 +25,7 @@ public class MainController {
     }
 
     @GetMapping("/users")
-    public String showUsers(Map<String,Object> model,Map<String,Object> tableName)
+    public String users(Map<String,Object> model,Map<String,Object> tableName)
     {
         Iterable<User> users=UserRepo.findAll();
         model.put("users", users);
