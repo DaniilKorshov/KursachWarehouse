@@ -3,8 +3,8 @@ package com.kursach.KursachWarehouse.domain;
 import javax.persistence.*;
 
 @Entity // This tells Hibernate to make a table out of this class
-@Table(name="orderLine")
-public class OrderLine {
+@Table(name="WarehouseOrderLine")
+public class WarehouseOrderLine {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
@@ -36,7 +36,7 @@ public class OrderLine {
 
 
 
-    public OrderLine() {
+    public WarehouseOrderLine() {
     }
 
 }

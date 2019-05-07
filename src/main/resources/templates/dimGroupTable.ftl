@@ -14,6 +14,7 @@
                 <th>Email</th>
                 <th>Телефон</th>
                 <th>Пароль</th>
+                <th>Доступ</th>
                 <th colspan="3">Действия</th>
             </tr>
             </thead>
@@ -27,8 +28,8 @@
                     <td>${User.surname}</td>
                     <td>${User.email}</td>
                     <td>${User.phone_number}</td>
-                    <!--роль-->
                     <td>${User.password}</td>
+                    <td><#list User.userRoles as UserRole>${UserRole}</#list></td>
                     <@menus.crudButtons/>
                 </tr>
             <#else>

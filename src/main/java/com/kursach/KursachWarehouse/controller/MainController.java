@@ -1,6 +1,8 @@
 package com.kursach.KursachWarehouse.controller;
 
+import com.kursach.KursachWarehouse.domain.Cell;
 import com.kursach.KursachWarehouse.domain.User;
+import com.kursach.KursachWarehouse.repos.CellRepository;
 import com.kursach.KursachWarehouse.repos.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -10,9 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.security.Principal;
 import java.util.Map;
 
@@ -22,6 +21,9 @@ import java.util.Map;
 public class MainController {
     @Autowired
     private UserRepository UserRepo;
+
+    @Autowired
+    private CellRepository CellRepo;
 
 
 
@@ -51,8 +53,25 @@ public class MainController {
         }
         model.addAttribute("users", users);
         model.addAttribute("filter",filter);
-        return "table_page";
+        return "userTable";
     }
+
+    @GetMapping("/cells")
+    public String cells(@RequestParam(required = false,defaultValue = "") String filter, Model model)
+    {
+        Iterable<Cell> cells=CellRepo.findAll();
+
+        if (filter!=null&&!filter.isEmpty()){
+            cells=CellRepo.findByWarehouse(filter);
+        }
+        else {
+            cells=CellRepo.findAll();
+        }
+        model.addAttribute("cells", cells);
+        model.addAttribute("filter",filter);
+        return "cellTable";
+    }
+
 
 
     @GetMapping("/choose_table")

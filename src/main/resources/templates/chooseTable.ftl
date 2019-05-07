@@ -22,7 +22,9 @@
                     </div>
                     <div class="card-body">
                         <p style="margin-top: 5vh">Информация о складских заказах</p>
+                        <form action="/warehouseOrders">
                         <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="margin-top: 5vh">Просмотреть</button>
+                        </form>
                     </div>
                 </div>
                 <div class="card mb-4 box-shadow">
@@ -31,7 +33,9 @@
                     </div>
                     <div class="card-body">
                         <p style="margin-top: 5vh">Информация о линиях складских заказов</p>
+                        <form action="/warehouseOrderLines">
                         <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="margin-top: 5vh">Просмотреть</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -44,7 +48,9 @@
                     </div>
                     <div class="card-body">
                         <p style="margin-top: 5vh">Информация о материалах и продукции</p>
+                        <form action="/invent">
                         <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="margin-top: 5vh">Просмотреть</button>
+                        </form>
                     </div>
                 </div>
 
@@ -54,7 +60,9 @@
                     </div>
                     <div class="card-body">
                         <p style="margin-top: 5vh">Информация о комплектациях</p>
+                        <form action="/dimgroup">
                         <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="margin-top: 5vh">Просмотреть</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -67,7 +75,9 @@
                     </div>
                     <div class="card-body">
                         <p style="margin-top: 5vh">Информация о ячейках</p>
-                        <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="margin-top: 5vh">Просмотреть</button>
+                        <form action="/cells">
+                            <button class="btn btn-lg btn-block btn-outline-primary" style="margin-top: 5vh">Просмотреть</button>
+                        </form>
                     </div>
                 </div>
                 <div class="card mb-4 box-shadow">
@@ -76,7 +86,9 @@
                     </div>
                     <div class="card-body">
                         <p style="margin-top: 5vh">Информация о складских помещениях</p>
-                        <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="margin-top: 5vh">Просмотреть</button>
+                        <form action="/users">
+                            <button class="btn btn-lg btn-block btn-outline-primary" style="margin-top: 5vh">Просмотреть</button>
+                        </form>
                     </div>
                 </div>
             </div>
