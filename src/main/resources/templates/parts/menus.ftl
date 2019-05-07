@@ -28,9 +28,9 @@
 </#macro>
 
 <#macro crudButtons>
-    <td><button class="btn btn-success btn-sm">Добавить</button></td>
+    <td><button class="btn btn-success btn-sm">+</button></td>
+    <td><button class="btn btn-danger btn-sm">-</button></td>
     <td><button class="btn btn-warning btn-sm">Изменить</button></td>
-    <td><button class="btn btn-danger btn-sm">Удалить </button></td>
 </#macro>
 
 <#macro tableHead tableName fieldForFound action>

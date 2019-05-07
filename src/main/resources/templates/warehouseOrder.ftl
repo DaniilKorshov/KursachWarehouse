@@ -3,33 +3,25 @@
 
 <@common.page>
     <@menus.adminNav/>
-    <@menus.tableHead "Таблица пользователей" "Фамилия" "/users"/>
+    <@menus.tableHead "Таблица складских заказов" "ID склада" "/warehouseOrders"/>
     <div class="table-responsive" style="text-align: center;">
         <table class="table table-hover table-bordered ">
             <thead>
             <tr>
                 <th scope="row">#</th>
-                <th>Имя</th>
-                <th>Фамилия</th>
-                <th>Email</th>
-                <th>Телефон</th>
-                <th>Пароль</th>
-                <th>Доступ</th>
+                <th>Тип</th>
+                <th>Описание</th>
                 <th colspan="3">Действия</th>
             </tr>
             </thead>
             <tbody>
 
-            <#list users as User>
+            <#list warehouseOrders as WarehouseOrder>
 
                 <tr>
-                    <th scope="row">${User.id}</th>
-                    <td>${User.name}</td>
-                    <td>${User.surname}</td>
-                    <td>${User.email}</td>
-                    <td>${User.phone_number}</td>
-                    <td>${User.password}</td>
-                    <td><#list User.userRoles as UserRole>${UserRole}</#list></td>
+                    <th scope="row">${WarehouseOrder.id}</th>
+                    <td><#list WarehouseOrder.type as WarehouseOrderType>${WarehouseOrderType}</#list></td>
+                    <td>${WarehouseOrder.description}</td>
                     <@menus.crudButtons/>
                 </tr>
             <#else>

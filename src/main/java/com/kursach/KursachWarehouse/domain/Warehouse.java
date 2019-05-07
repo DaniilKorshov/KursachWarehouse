@@ -9,8 +9,8 @@ public class Warehouse {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
-    private String Name;
-    private String Address;
+    private String name;
+    private String warehouseAddress;
 
     public Warehouse() { }
 
@@ -21,15 +21,15 @@ public class Warehouse {
         this.id = id;
     }
     public String getName() {
-        return Name;
+        return name;
     }
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
-    public String getAddress() {
-        return Address;
+    public String getWarehouseAddress() {
+        return warehouseAddress;
     }
-    public void setAddress(String address) {
-        Address = address;
+    public void setWarehouseAddress(String warehouseAddress) {
+        this.warehouseAddress = warehouseAddress;
     }
 }

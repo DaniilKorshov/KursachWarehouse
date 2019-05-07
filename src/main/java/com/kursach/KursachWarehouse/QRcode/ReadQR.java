@@ -25,7 +25,7 @@ public class ReadQR {
             hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
             System.out.println("Data read from QR Code: " + readQRCode(filePath, charset, hintMap));
         } catch (Exception e) {
-            // TODO: handle exception
+            e.printStackTrace();
         }
     }
     public static String readQRCode(String filePath, String charset, Map hintMap)

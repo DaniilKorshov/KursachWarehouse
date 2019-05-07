@@ -2,8 +2,9 @@ package com.kursach.KursachWarehouse.controller;
 
 import com.kursach.KursachWarehouse.domain.Cell;
 import com.kursach.KursachWarehouse.domain.User;
-import com.kursach.KursachWarehouse.repos.CellRepository;
-import com.kursach.KursachWarehouse.repos.UserRepository;
+import com.kursach.KursachWarehouse.domain.Warehouse;
+import com.kursach.KursachWarehouse.domain.WarehouseOrder;
+import com.kursach.KursachWarehouse.repos.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,7 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.security.Principal;
 import java.util.Map;
 
 
@@ -20,10 +20,19 @@ import java.util.Map;
 @Controller
 public class MainController {
     @Autowired
-    private UserRepository UserRepo;
+    private UserRepository UserRepository;
+
+    @Autowired
+    private UserRepo UserRepo;
 
     @Autowired
     private CellRepository CellRepo;
+
+    @Autowired
+    private WarehouseOrderRepository WarehouseOrderRepo;
+
+    @Autowired
+    private WarehouseRepository WarehouseRepo ;
 
 
 
@@ -33,23 +42,25 @@ public class MainController {
     }
 
     @GetMapping("/main")
-    public String main(Map<String, Object> model, Principal principal){
-        UserDetails userDetails =
-                (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        model.put("userNS",userDetails.getUsername());
+    public String main(Map<String, Object> model){
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User user=UserRepo.findByEmail(userDetails.getUsername());
+        model.put("userNS",user.getName()+" "+user.getSurname());
+        model.put("userPhone",user.getPhone_number());
+        model.put("userEmail",user.getEmail());
         return "main";
     }
 
     @GetMapping("/users")
     public String users(@RequestParam(required = false,defaultValue = "") String filter, Model model)
     {
-        Iterable<User> users=UserRepo.findAll();
+        Iterable<User> users= UserRepository.findAll();
 
         if (filter!=null&&!filter.isEmpty()){
-            users=UserRepo.findBySurname(filter);
+            users= UserRepository.findBySurname(filter);
         }
         else {
-            users=UserRepo.findAll();
+            users= UserRepository.findAll();
         }
         model.addAttribute("users", users);
         model.addAttribute("filter",filter);
@@ -62,7 +73,7 @@ public class MainController {
         Iterable<Cell> cells=CellRepo.findAll();
 
         if (filter!=null&&!filter.isEmpty()){
-            cells=CellRepo.findByWarehouse(filter);
+            cells=CellRepo.findByWeightGreaterThanEqual(Double.parseDouble(filter));
         }
         else {
             cells=CellRepo.findAll();
@@ -72,7 +83,37 @@ public class MainController {
         return "cellTable";
     }
 
+    @GetMapping("/warehouseOrders")
+    public String warehouseOrders(@RequestParam(required = false,defaultValue = "") String filter, Model model)
+    {
+        Iterable<WarehouseOrder> warehouseOrders= WarehouseOrderRepo.findAll();
 
+        if (filter!=null&&!filter.isEmpty()){
+            warehouseOrders= WarehouseOrderRepo.findById(Long.parseLong(filter));
+        }
+        else {
+            warehouseOrders= WarehouseOrderRepo.findAll();
+        }
+        model.addAttribute("warehouseOrders", warehouseOrders);
+        model.addAttribute("filter",filter);
+        return "warehouseOrder";
+    }
+
+    @GetMapping("/warehouse")
+    public String warehouse(@RequestParam(required = false,defaultValue = "") String filter, Model model)
+    {
+        Iterable<Warehouse> warehouses= WarehouseRepo.findAll();
+
+        if (filter!=null&&!filter.isEmpty()){
+            warehouses= WarehouseRepo.findByWarehouseAddressContaining(filter);
+        }
+        else {
+            warehouses= WarehouseRepo.findAll();
+        }
+        model.addAttribute("warehouses", warehouses);
+        model.addAttribute("filter",filter);
+        return "warehouseTable";
+    }
 
     @GetMapping("/choose_table")
     public String choose_table(Map<String, Object> model){

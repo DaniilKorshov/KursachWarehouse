@@ -3,7 +3,7 @@
 <@common.page>
     <div class="container col-7 text-center" style="padding-top: 10vh">
         <h4 style="padding-top:1vh;padding-bottom:2vh;text-align: center">REGISTRATION</h4>
-        <h6 style="padding-top:2vh;padding-bottom:2vh;text-align: center">${message}</h6>
+        <h6 style="padding-top:2vh;padding-bottom:2vh;text-align: center"><#if message??>${message}<#else>Впишите данные</#if></h6>
 
         <form class="form-signin align-middle" role="form" action="/registration" method="post" >
             <input type="email" class="form-control" name="email" placeholder="Email" required="" autofocus=""
@@ -16,6 +16,5 @@
             <button class="btn btn-md btn-primary col-6" type="submit" style="margin-top: 2vh">Регистрация</button>
             <a class="btn btn-md btn-outline-primary col-6" href="/login" role="button" style="margin-top: 2vh">Авторизация</a>
         </form>
-
     </div>
 </@common.page>

@@ -17,7 +17,6 @@ public class RegistrationController {
     private UserRepo userRepo;
     @GetMapping("/registration")
     public String registration(){
-
         return "registration";
     }
 
@@ -26,10 +25,9 @@ public class RegistrationController {
         User userFromDb = userRepo.findByEmail(user.getEmail());
 
         if (userFromDb!=null){
-            model.put("message","User exists");
+            model.put("message","Такой пользователь уже существует");
             return "registration";
         }
-
         user.setActive(true);
         user.setUserRoles(Collections.singleton(UserRole.USER));
         userRepo.save(user);

@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface CellRepository extends CrudRepository<Cell,Integer> {
-    List<Cell> findByWarehouse(String tag);
+    List<Cell> findByWeightGreaterThanEqual(Double tag);
 }

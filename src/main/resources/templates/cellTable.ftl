@@ -3,7 +3,7 @@
 
 <@common.page>
     <@menus.adminNav/>
-    <@menus.tableHead "Таблица ячеек" "Ячейки по id Склада" "/cells"/>
+    <@menus.tableHead "Таблица ячеек" "Максимальный вес ячейки" "/cells"/>
     <div class="table-responsive" style="text-align: center;">
         <table class="table table-hover table-bordered ">
             <thead>
@@ -28,7 +28,7 @@
 
                 <tr>
                     <th scope="row">${Cell.id}</th>
-                    <td>${Cell.warehouse}</td>
+                    <td>${Cell.warehouse.getWarehouseAddress()}</td>
                     <td>${Cell.zone}</td>
                     <td>${Cell.passageway}</td>
                     <td>${Cell.stillage}</td>
@@ -41,7 +41,7 @@
                     <@menus.crudButtons/>
                 </tr>
             <#else>
-                <td colspan="9">Ничего не найдено</td>
+                <td colspan="12">Ничего не найдено</td>
             </#list>
             </tbody>
         </table>
