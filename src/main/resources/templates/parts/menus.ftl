@@ -44,3 +44,18 @@
         </form>
     </div>
 </#macro>
+
+<#macro tableBlock tableName info action>
+    <div class="card mb-4 box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">${tableName}</h4>
+        </div>
+        <div class="card-body">
+            <p style="margin-top: 5vh">${info}</p>
+            <form action="${action}">
+                <button class="btn btn-lg btn-block btn-outline-primary" style="margin-top: 5vh">Просмотреть
+                </button>
+            </form>
+        </div>
+    </div>
+</#macro>

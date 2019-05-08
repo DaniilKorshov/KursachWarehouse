@@ -3,33 +3,31 @@
 
 <@common.page>
     <@menus.adminNav/>
-    <@menus.tableHead "Таблица пользователей" "Фамилия" "/users"/>
+    <@menus.tableHead "Таблица комплектация" "ID комплектации" "/dimGroup"/>
     <div class="table-responsive" style="text-align: center;">
         <table class="table table-hover table-bordered ">
             <thead>
             <tr>
                 <th scope="row">#</th>
-                <th>Имя</th>
-                <th>Фамилия</th>
-                <th>Email</th>
-                <th>Телефон</th>
-                <th>Пароль</th>
-                <th>Доступ</th>
+                <th>Ширина объекта</th>
+                <th>Длина объекта</th>
+                <th>Вес объекта (кг)</th>
+                <th>Цвет объекта</th>
+                <th>Конфигурация</th>
                 <th colspan="3">Действия</th>
             </tr>
             </thead>
             <tbody>
 
-            <#list users as User>
+            <#list dimGroups as DimGroup>
 
                 <tr>
-                    <th scope="row">${User.id}</th>
-                    <td>${User.name}</td>
-                    <td>${User.surname}</td>
-                    <td>${User.email}</td>
-                    <td>${User.phone_number}</td>
-                    <td>${User.password}</td>
-                    <td><#list User.userRoles as UserRole>${UserRole}</#list></td>
+                    <th scope="row">${DimGroup.id}</th>
+                    <td>${DimGroup.width}</td>
+                    <td>${DimGroup.length}</td>
+                    <td>${DimGroup.weight}</td>
+                    <td>${DimGroup.color}</td>
+                    <td>${DimGroup.config}</td>
                     <@menus.crudButtons/>
                 </tr>
             <#else>

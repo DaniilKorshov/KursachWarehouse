@@ -1,9 +1,6 @@
 package com.kursach.KursachWarehouse.controller;
 
-import com.kursach.KursachWarehouse.domain.Cell;
-import com.kursach.KursachWarehouse.domain.User;
-import com.kursach.KursachWarehouse.domain.Warehouse;
-import com.kursach.KursachWarehouse.domain.WarehouseOrder;
+import com.kursach.KursachWarehouse.domain.*;
 import com.kursach.KursachWarehouse.repos.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -26,13 +23,23 @@ public class MainController {
     private UserRepo UserRepo;
 
     @Autowired
+    private WarehouseRepository WarehouseRepo ;
+
+    @Autowired
     private CellRepository CellRepo;
 
     @Autowired
     private WarehouseOrderRepository WarehouseOrderRepo;
 
     @Autowired
-    private WarehouseRepository WarehouseRepo ;
+    private WarehouseOrderLineRepository WarehouseOrderLineRepo;
+
+    @Autowired
+    private DimGroupRepository DimGroupRepo;
+
+    @Autowired
+    private InventRepository InventRepo;
+
 
 
 
@@ -113,6 +120,53 @@ public class MainController {
         model.addAttribute("warehouses", warehouses);
         model.addAttribute("filter",filter);
         return "warehouseTable";
+    }
+
+    @GetMapping("/warehouseOrderLine")
+    public String warehouseOrderLine(@RequestParam(required = false,defaultValue = "") String filter, Model model)
+    {
+        Iterable<WarehouseOrderLine> warehouseOrderLines= WarehouseOrderLineRepo.findAll();
+
+        if (filter!=null&&!filter.isEmpty()){
+            warehouseOrderLines= WarehouseOrderLineRepo.findByWarehouseOrder(Long.parseLong(filter));
+        }
+        else {
+            warehouseOrderLines= WarehouseOrderLineRepo.findAll();
+        }
+        model.addAttribute("warehouseOrderLines", warehouseOrderLines);
+        model.addAttribute("filter",filter);
+        return "warehouseOrderLine";
+    }
+
+    @GetMapping("/dimGroup")
+    public String dimGroup(@RequestParam(required = false,defaultValue = "") String filter, Model model)
+    {
+        Iterable<Dimgroup> dimGroups= DimGroupRepo.findAll();
+
+        if (filter!=null&&!filter.isEmpty()){
+            dimGroups = DimGroupRepo.findById(Long.parseLong(filter));
+        }
+        else {
+            dimGroups= DimGroupRepo.findAll();
+        }
+        model.addAttribute("dimGroups", dimGroups);
+        model.addAttribute("filter",filter);
+        return "dimGroupTable";
+    }
+    @GetMapping("/invent")
+    public String invent(@RequestParam(required = false,defaultValue = "") String filter, Model model)
+    {
+        Iterable<Invent> invents= InventRepo.findAll();
+
+        if (filter!=null&&!filter.isEmpty()){
+            invents = InventRepo.findByNameContaining(filter);
+        }
+        else {
+            invents= InventRepo.findAll();
+        }
+        model.addAttribute("invents", invents);
+        model.addAttribute("filter",filter);
+        return "inventTable";
     }
 
     @GetMapping("/choose_table")

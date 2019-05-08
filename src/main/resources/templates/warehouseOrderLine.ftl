@@ -3,37 +3,41 @@
 
 <@common.page>
     <@menus.adminNav/>
-    <@menus.tableHead "Таблица пользователей" "Фамилия" "/users"/>
+    <@menus.tableHead "Таблица линий заказов" "Складской заказ" "/warehouseOrderLine"/>
     <div class="table-responsive" style="text-align: center;">
         <table class="table table-hover table-bordered ">
             <thead>
             <tr>
                 <th scope="row">#</th>
-                <th>Имя</th>
-                <th>Фамилия</th>
-                <th>Email</th>
-                <th>Телефон</th>
-                <th>Пароль</th>
-                <th>Доступ</th>
+                <th>Складской заказ</th>
+                <th>Выполняющий</th>
+                <th>Груз</th>
+                <th>Количество</th>
+                <th>Откуда</th>
+                <th>Куда</th>
+                <th>Груз забран</th>
+                <th>Груз доставлен</th>
                 <th colspan="3">Действия</th>
             </tr>
             </thead>
             <tbody>
 
-            <#list users as User>
+            <#list warehouseOrderLines as WarehouseOrderLine>
 
                 <tr>
-                    <th scope="row">${User.id}</th>
-                    <td>${User.name}</td>
-                    <td>${User.surname}</td>
-                    <td>${User.email}</td>
-                    <td>${User.phone_number}</td>
-                    <td>${User.password}</td>
-                    <td><#list User.userRoles as UserRole>${UserRole}</#list></td>
+                    <th scope="row">${WarehouseOrderLine.id}</th>
+                    <td>${WarehouseOrderLine.warehouseOrder.getId()}</td>
+                    <td>${WarehouseOrderLine.user.getSurname()} ${WarehouseOrderLine.user.getPhone_number()}</td>
+                    <td>WarehouseOrderLine.invent.getName()</td>
+                    <td>${WarehouseOrderLine.qty}</td>
+                    <td>${WarehouseOrderLine.startLocation.getId()}</td>
+                    <td>${WarehouseOrderLine.finishLocation.getId()}</td>
+                    <td>${WarehouseOrderLine.takeStatus?string("Забран","Не забран")}</td>
+                    <td>${WarehouseOrderLine.putStatus?string("Доставлен","Не доставлен")}</td>
                     <@menus.crudButtons/>
                 </tr>
             <#else>
-                <td colspan="9">Ничего не найдено</td>
+                <td colspan="12">Ничего не найдено</td>
             </#list>
             </tbody>
         </table>

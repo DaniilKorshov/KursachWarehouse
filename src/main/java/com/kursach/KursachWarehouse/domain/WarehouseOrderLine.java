@@ -27,8 +27,8 @@ public class WarehouseOrderLine {
 
     private Long qty;
 
-    private boolean takeStatus=false;
-    private boolean putStatus=false;
+    private boolean takeStatus;
+    private boolean putStatus;
 
     @ManyToOne
     @JoinColumn(name="user_id")
@@ -39,4 +39,75 @@ public class WarehouseOrderLine {
     public WarehouseOrderLine() {
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public WarehouseOrder getWarehouseOrder() {
+        return warehouseOrder;
+    }
+
+    public void setWarehouseOrder(WarehouseOrder warehouseOrder) {
+        this.warehouseOrder = warehouseOrder;
+    }
+
+    public Invent getInvent() {
+        return invent;
+    }
+
+    public void setInvent(Invent invent) {
+        this.invent = invent;
+    }
+
+    public Cell getStartLocation() {
+        return startLocation;
+    }
+
+    public void setStartLocation(Cell startLocation) {
+        this.startLocation = startLocation;
+    }
+
+    public Cell getFinishLocation() {
+        return finishLocation;
+    }
+
+    public void setFinishLocation(Cell finishLocation) {
+        this.finishLocation = finishLocation;
+    }
+
+    public Long getQty() {
+        return qty;
+    }
+
+    public void setQty(Long qty) {
+        this.qty = qty;
+    }
+
+    public boolean isTakeStatus() {
+        return takeStatus;
+    }
+
+    public void setTakeStatus(boolean takeStatus) {
+        this.takeStatus = takeStatus;
+    }
+
+    public boolean isPutStatus() {
+        return putStatus;
+    }
+
+    public void setPutStatus(boolean putStatus) {
+        this.putStatus = putStatus;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
