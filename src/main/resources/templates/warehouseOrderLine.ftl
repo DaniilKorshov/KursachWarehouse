@@ -28,7 +28,7 @@
                     <th scope="row">${WarehouseOrderLine.id}</th>
                     <td>${WarehouseOrderLine.warehouseOrder.getId()}</td>
                     <td>${WarehouseOrderLine.user.getSurname()} ${WarehouseOrderLine.user.getPhone_number()}</td>
-                    <td>WarehouseOrderLine.invent.getName()</td>
+                    <td>${WarehouseOrderLine.invent.getName()}</td>
                     <td>${WarehouseOrderLine.qty}</td>
                     <td>${WarehouseOrderLine.startLocation.getId()}</td>
                     <td>${WarehouseOrderLine.finishLocation.getId()}</td>
