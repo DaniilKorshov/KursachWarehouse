@@ -17,13 +17,12 @@
                 <th>Куда</th>
                 <th>Груз забран</th>
                 <th>Груз доставлен</th>
-                <th colspan="3">Действия</th>
+                <th colspan="2">Действия</th>
             </tr>
             </thead>
             <tbody>
 
             <#list warehouseOrderLines as WarehouseOrderLine>
-
                 <tr>
                     <th scope="row">${WarehouseOrderLine.id}</th>
                     <td>${WarehouseOrderLine.warehouseOrder.getId()}</td>
@@ -32,12 +31,13 @@
                     <td>${WarehouseOrderLine.qty}</td>
                     <td>${WarehouseOrderLine.startLocation.getId()}</td>
                     <td>${WarehouseOrderLine.finishLocation.getId()}</td>
-                    <td>${WarehouseOrderLine.takeStatus?string("Забран","Не забран")}</td>
-                    <td>${WarehouseOrderLine.putStatus?string("Доставлен","Не доставлен")}</td>
-                    <@menus.crudButtons/>
+                    <td><#list WarehouseOrderLine.takeStatus as TaskStatus>${TaskStatus}</#list></td>
+                    <td><#list WarehouseOrderLine.putStatus as TaskStatus>${TaskStatus}</#list></td>
+                    <@menus.crudButtons "/addWarehouseOrderLine" "/delWarehouseOrderLine?id=${WarehouseOrderLine.id}"/>
                 </tr>
             <#else>
-                <td colspan="12">Ничего не найдено</td>
+                <td colspan="9">Ничего не найдено</td>
+                <@menus.crudButtons "/addWarehouseOrderLine" "/warehouseOrderLine"/>
             </#list>
             </tbody>
         </table>

@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface CellRepository extends CrudRepository<Cell,Integer> {
     List<Cell> findByWeightGreaterThanEqual(Double tag);
+    Cell findById(Long tag);
 }

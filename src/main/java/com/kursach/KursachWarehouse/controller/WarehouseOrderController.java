@@ -1,7 +1,9 @@
 package com.kursach.KursachWarehouse.controller;
 
 import com.kursach.KursachWarehouse.domain.WarehouseOrder;
+import com.kursach.KursachWarehouse.domain.WarehouseOrderLine;
 import com.kursach.KursachWarehouse.domain.enums.WarehouseOrderType;
+import com.kursach.KursachWarehouse.repos.WarehouseOrderLineRepository;
 import com.kursach.KursachWarehouse.repos.WarehouseOrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +19,9 @@ import java.util.Map;
 public class WarehouseOrderController {
     @Autowired
     private WarehouseOrderRepository WarehouseOrderRepo;
+
+    @Autowired
+    private WarehouseOrderLineRepository WarehouseOrderLineRepo;
 
     @GetMapping("/warehouseOrder")
     public String warehouseOrder(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
@@ -35,7 +40,10 @@ public class WarehouseOrderController {
     @GetMapping("/delWarehouseOrder")
     public String delWarehouseOrder(@RequestParam (name="id",required = false,defaultValue = "0") Long ID)
     {
+        if (WarehouseOrderLineRepo.findByWarehouseOrder_Id(ID)==null) {
             WarehouseOrderRepo.deleteById(ID);
+
+        }
         return "redirect:/warehouseOrder";
     }
 
@@ -53,7 +61,6 @@ public class WarehouseOrderController {
     @PostMapping("/addWarehouseOrder")
     public String addWarehouseOrder(WarehouseOrder order,Map<String,Object> model)
     {
-
         WarehouseOrderRepo.save(order);
         return "redirect:/warehouseOrder";
     }
