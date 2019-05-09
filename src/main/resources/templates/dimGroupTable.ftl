@@ -3,7 +3,7 @@
 
 <@common.page>
     <@menus.adminNav/>
-    <@menus.tableHead "Таблица комплектация" "ID комплектации" "/dimGroup"/>
+    <@menus.tableHead "Таблица комплектаций" "ID комплектации" "/dimGroup"/>
     <div class="table-responsive" style="text-align: center;">
         <table class="table table-hover table-bordered ">
             <thead>
@@ -14,7 +14,7 @@
                 <th>Вес объекта (кг)</th>
                 <th>Цвет объекта</th>
                 <th>Конфигурация</th>
-                <th colspan="3">Действия</th>
+                <th colspan="2">Действия</th>
             </tr>
             </thead>
             <tbody>
@@ -28,10 +28,11 @@
                     <td>${DimGroup.weight}</td>
                     <td>${DimGroup.color}</td>
                     <td>${DimGroup.config}</td>
-                    <@menus.crudButtons/>
+                    <@menus.crudButtons "/addDimGroup" "/delDimGroup?id=${DimGroup.id}"/>
                 </tr>
             <#else>
-                <td colspan="9">Ничего не найдено</td>
+                <td colspan="6">Ничего не найдено</td>
+                <@menus.crudButtons "/addDimGroup" "/dimGroup"/>
             </#list>
             </tbody>
         </table>

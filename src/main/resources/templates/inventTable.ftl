@@ -13,7 +13,7 @@
                 <th>Тип груза</th>
                 <th>Единица измерения</th>
                 <th>Комплектация</th>
-                <th colspan="3">Действия</th>
+                <th colspan="2">Действия</th>
             </tr>
             </thead>
             <tbody>
@@ -25,11 +25,12 @@
                     <td>${Invent.name}</td>
                     <td><#list Invent.itemType as ItemType>${ItemType}</#list></td>
                     <td>${Invent.unit}</td>
-                    <td>${Invent.dimgroup.getId()}</td>
-                    <@menus.crudButtons/>
+                    <td>${Invent.dimgroup.id}</td>
+                    <@menus.crudButtons "/addInvent" "/delInvent?id=${Invent.id}"/>
                 </tr>
             <#else>
-                <td colspan="8">Ничего не найдено</td>
+                <td colspan="5">Ничего не найдено</td>
+                <@menus.crudButtons "/addInvent" "/invent"/>
             </#list>
             </tbody>
         </table>

@@ -11,7 +11,7 @@
                 <th scope="row">#</th>
                 <th>Тип</th>
                 <th>Описание</th>
-                <th colspan="3">Действия</th>
+                <th colspan="2">Действия</th>
             </tr>
             </thead>
             <tbody>
@@ -22,10 +22,11 @@
                     <th scope="row">${WarehouseOrder.id}</th>
                     <td><#list WarehouseOrder.type as WarehouseOrderType>${WarehouseOrderType}</#list></td>
                     <td>${WarehouseOrder.description}</td>
-                    <@menus.crudButtons/>
+                    <@menus.crudButtons "/addWarehouseOrder" "/delWarehouseOrder?id=${WarehouseOrder.id}"/>
                 </tr>
             <#else>
-                <td colspan="9">Ничего не найдено</td>
+                <td colspan="3">Ничего не найдено</td>
+                <@menus.crudButtons "/addWarehouseOrder" "/warehouseOrder"/>
             </#list>
             </tbody>
         </table>

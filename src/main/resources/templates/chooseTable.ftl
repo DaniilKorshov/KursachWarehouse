@@ -6,7 +6,7 @@
     <div class="container" style="padding-top: 5vh;">
         <div class="card-deck mb-3 text-center">
             <@adminNav.tableBlock "Пользователи" "Информация о пользователях" "/users"/>
-            <@adminNav.tableBlock "Складские заказы" "Информация о складских заказах" "/warehouseOrders"/>
+            <@adminNav.tableBlock "Складские заказы" "Информация о складских заказах" "/warehouseOrder"/>
             <@adminNav.tableBlock "Линии заказов" "Информация о линиях заказов" "/warehouseOrderLine"/>
         </div>
     </div>

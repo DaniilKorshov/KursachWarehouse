@@ -27,10 +27,9 @@
     </nav>
 </#macro>
 
-<#macro crudButtons>
-    <td><button class="btn btn-success btn-sm">+</button></td>
-    <td><button class="btn btn-danger btn-sm">-</button></td>
-    <td><button class="btn btn-warning btn-sm">Изменить</button></td>
+<#macro crudButtons AddPage DeleteAction>
+    <td><a class="btn btn-success btn-sm" href="${AddPage}">+</a></td>
+    <td><a class="btn btn-danger btn-sm" href="${DeleteAction}">-</a> </td>
 </#macro>
 
 <#macro tableHead tableName fieldForFound action>
@@ -57,5 +56,15 @@
                 </button>
             </form>
         </div>
+    </div>
+</#macro>
+
+<#macro changePage tableName message action>
+    <div class="container col-7 text-center" style="padding-top: 10vh">
+    <h4 style="padding-top:1vh;padding-bottom:2vh;text-align: center">${tableName}</h4>
+        <h6 style="padding-top:2vh;padding-bottom:2vh;text-align: center;color:red;"><#if message??>${message}<#else>Впишите данные</#if></h6>
+    <form class="form-signin align-middle" role="form" action="${action}" method="post" >
+        <#nested>
+    </form>
     </div>
 </#macro>

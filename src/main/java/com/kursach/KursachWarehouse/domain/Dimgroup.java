@@ -17,15 +17,18 @@ public class Dimgroup {
     private String color;
     private String config;
 
-    public Dimgroup() {
+    public Dimgroup() { }
+
+    public Dimgroup(double width, double length, double weight, String color, String config) {
+        this.width = width;
+        this.length = length;
+        this.weight = weight;
+        this.color = color;
+        this.config = config;
     }
 
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
     public double getWidth() {
         return width;
     }

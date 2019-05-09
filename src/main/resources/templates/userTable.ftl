@@ -29,7 +29,7 @@
                     <td>${User.phone_number}</td>
                     <td>${User.password}</td>
                     <td><#list User.userRoles as UserRole>${UserRole}</#list></td>
-                    <@menus.crudButtons/>
+                    <@menus.crudButtons "" ""/>
                 </tr>
             <#else>
                 <td colspan="12">Ничего не найдено</td>

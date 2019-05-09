@@ -9,4 +9,5 @@ import java.util.List;
 public interface WarehouseOrderLineRepository extends CrudRepository<WarehouseOrderLine,Integer> {
 
     List<WarehouseOrderLine> findWarehouseOrderLineByWarehouseOrder_Id(Long tag);
+    Integer deleteById(Long tag);
 }
