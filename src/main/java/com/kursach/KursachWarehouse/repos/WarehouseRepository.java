@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface WarehouseRepository extends CrudRepository <Warehouse,Integer> {
     List<Warehouse> findByWarehouseAddressContaining(String tag);
+    Integer findById(Long tag);
+    Integer deleteById(Long tag);
 }

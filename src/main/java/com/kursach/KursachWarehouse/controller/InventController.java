@@ -42,7 +42,7 @@ public class InventController {
 
     @Transactional
     @GetMapping("/delInvent")
-    public String delDimGroup(@RequestParam (name="id",required = false,defaultValue = "0") Long ID)
+    public String delInvent(@RequestParam (name="id",required = false,defaultValue = "0") Long ID)
     {
         InventRepo.deleteById(ID);
         return "redirect:/invent";
@@ -60,7 +60,7 @@ public class InventController {
     }
 
     @PostMapping("/addInvent")
-    public String addDimGroup(Invent invent,Map<String,Object> model)
+    public String addInvent(Invent invent,Map<String,Object> model)
     {
         Invent inventFind=InventRepo.findByNameAndDimgroup_Id(invent.getName(),invent.getDimgroup().getId());
         Iterable<Dimgroup> dimgroupFind=DimGroupRepo.findById(invent.getDimgroup().getId());
@@ -68,7 +68,7 @@ public class InventController {
         {
             model.put("tableName","Грузы");
             model.put("message","Не существует такой комплектации,введите данные повторно");
-            model.put("action","/Invent");
+            model.put("action","/invent");
             model.put("crudName","Добавить");
             model.put("InventTypeM", ItemType.MATERIAL);
             model.put("InventTypeP", ItemType.PRODUCT);
@@ -78,7 +78,7 @@ public class InventController {
         {
             model.put("tableName","Грузы");
             model.put("message","Такой объект уже существует");
-            model.put("action","/Invent");
+            model.put("action","/invent");
             model.put("crudName","Добавить");
             model.put("InventTypeM", ItemType.MATERIAL);
             model.put("InventTypeP", ItemType.PRODUCT);

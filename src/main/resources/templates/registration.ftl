@@ -13,8 +13,8 @@
             <input class="form-control" name="surname" placeholder="Фамилия" style="margin-bottom: 3vh;">
             <input class="form-control" name="phone_number" placeholder="Номер телефона" style="margin-bottom: 3vh;">
             <input type="hidden" name="_csrf" value="${_csrf.token}"> <!--Для безопасности-->
-            <button class="btn btn-md btn-primary col-6" type="submit" style="margin-top: 2vh">Регистрация</button>
-            <a class="btn btn-md btn-outline-primary col-6" href="/login" role="button" style="margin-top: 2vh">Авторизация</a>
+            <button class="btn btn-md btn-primary col-md-6" type="submit" style="margin-top: 2vh">Регистрация</button>
+            <a class="btn btn-md btn-outline-primary col-md-6" href="/login" role="button" style="margin-top: 2vh">Авторизация</a>
         </form>
     </div>
 </@common.page>

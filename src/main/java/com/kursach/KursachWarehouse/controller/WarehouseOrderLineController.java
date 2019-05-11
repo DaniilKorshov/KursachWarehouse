@@ -1,11 +1,14 @@
 package com.kursach.KursachWarehouse.controller;
 
 import com.kursach.KursachWarehouse.domain.Invent;
+import com.kursach.KursachWarehouse.domain.User;
 import com.kursach.KursachWarehouse.domain.WarehouseOrder;
 import com.kursach.KursachWarehouse.domain.WarehouseOrderLine;
 import com.kursach.KursachWarehouse.domain.enums.TaskStatus;
 import com.kursach.KursachWarehouse.repos.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -31,6 +34,9 @@ public class WarehouseOrderLineController {
 
     @Autowired
     private UserRepository UserRepo;
+
+    @Autowired
+    private UserRepo UserRepoSecur;
 
     @GetMapping("/warehouseOrderLine")
     public String warehouseOrderLine(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
@@ -100,5 +106,19 @@ public class WarehouseOrderLineController {
         }
         WarehouseOrderLineRepo.save(orderLine);
         return "redirect:/warehouseOrderLine";
+    }
+    @GetMapping("/currentUserWarehouseOrderLine")
+    public String currentUserWarehouseOrderLine(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
+        Iterable<WarehouseOrderLine> warehouseOrderLines;
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User user = UserRepoSecur.findByEmail(userDetails.getUsername());
+        if (filter != null && !filter.isEmpty()) {
+            warehouseOrderLines = WarehouseOrderLineRepo.findWarehouseOrderLineByWarehouseOrder_Id(Long.parseLong(filter));
+        } else {
+            warehouseOrderLines = WarehouseOrderLineRepo.findByUser_Id(user.getId());
+        }
+        model.addAttribute("warehouseOrderLines", warehouseOrderLines);
+        model.addAttribute("filter", filter);
+        return "currentUserWarehouseOrderLine";
     }
 }

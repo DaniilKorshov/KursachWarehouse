@@ -9,5 +9,6 @@ public interface WarehouseOrderLineRepository extends CrudRepository<WarehouseOr
 
     List<WarehouseOrderLine> findWarehouseOrderLineByWarehouseOrder_Id(Long tag);
     WarehouseOrderLine findByWarehouseOrder_Id(Long tag);
+    List<WarehouseOrderLine> findByUser_Id(Long tag);
     Integer deleteById(Long tag);
 }

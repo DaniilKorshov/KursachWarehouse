@@ -11,7 +11,7 @@
                 <th scope="row">#</th>
                 <th>Название</th>
                 <th>Адрес</th>
-                <th colspan="3">Действия</th>
+                <th colspan="2">Действия</th>
             </tr>
             </thead>
             <tbody>
@@ -20,10 +20,11 @@
                     <th scope="row">${Warehouse.id}</th>
                     <td>${Warehouse.name}</td>
                     <td>${Warehouse.warehouseAddress}</td>
-                    <@menus.crudButtons/>
+                    <@menus.crudButtons "/addWarehouse" "/delWarehouse?id=${Warehouse.id}"/>
                 </tr>
             <#else>
-                <td colspan="6">Ничего не найдено</td>
+                <td colspan="3">Ничего не найдено</td>
+                <@menus.crudButtons "/addWarehouse" "/warehouse"/>
             </#list>
             </tbody>
         </table>

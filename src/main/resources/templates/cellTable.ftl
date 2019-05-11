@@ -19,7 +19,7 @@
                 <th>Ширина</th>
                 <th>Вес</th>
                 <th>Статус</th>
-                <th colspan="3">Действия</th>
+                <th colspan="2">Действия</th>
             </tr>
             </thead>
             <tbody>
@@ -38,10 +38,11 @@
                     <td>${Cell.width}</td>
                     <td>${Cell.weight}</td>
                     <td><#list Cell.cellStatus as CellStatus>${CellStatus}</#list></td>
-                    <@menus.crudButtons/>
+                    <@menus.crudButtons "/addCell" "delCell?id=${Cell.id}"/>
                 </tr>
             <#else>
-                <td colspan="12">Ничего не найдено</td>
+                <td colspan="11">Ничего не найдено</td>
+                <@menus.crudButtons "/addCell" "/cells"/>
             </#list>
             </tbody>
         </table>
