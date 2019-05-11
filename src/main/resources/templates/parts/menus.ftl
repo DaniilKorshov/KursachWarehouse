@@ -32,6 +32,10 @@
     <td><a class="btn btn-danger btn-sm" href="${DeleteAction}">-</a> </td>
 </#macro>
 
+<#macro changeButton ChangeAction>
+    <td><a class="btn btn-danger btn-sm" href="${ChangeAction}">Изменить</td>
+</#macro>
+
 <#macro tableHead tableName fieldForFound action>
     <div class="container-fluid">
         <h1 class="page-header text-center">${tableName}</h1>

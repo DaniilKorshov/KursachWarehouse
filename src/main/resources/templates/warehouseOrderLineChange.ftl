@@ -9,15 +9,17 @@
         <input class="form-control" name="qty" placeholder="Количество" style="margin-bottom: 3vh;">
         <input class="form-control" name="startLocation.id" placeholder="ID стартовой ячейки" style="margin-bottom: 3vh;">
         <input class="form-control" name="finishLocation.id" placeholder="ID финишной ячейки" style="margin-bottom: 3vh;">
+        <input class="form-control" name="user.id" placeholder="ID выполняющего" style="margin-bottom: 3vh;">
+        <p>Статус отборки</p>
         <select class="form-control" name="takeStatus" placeholder="Статус отборки" style="margin-bottom: 3vh;">
             <option>${StatusN}</option>
             <option>${StatusY}</option>
         </select>
+        <p>Статус доставки</p>
         <select class="form-control" name="putStatus" placeholder="Статус доставки" style="margin-bottom: 3vh;">
             <option>${StatusN}</option>
             <option>${StatusY}</option>
         </select>
-        <input class="form-control" name="user.id" placeholder="ID выполняющего" style="margin-bottom: 3vh;">
         <input type="hidden" name="_csrf" value="${_csrf.token}"> <!--Для безопасности-->
         <button class="btn btn-md btn-primary col-6" type="submit" style="margin-top: 2vh">${crudName}</button>
         <a class="btn btn-md btn-outline-primary col-6" href="/warehouseOrderLine" role="button" style="margin-top: 2vh">Отмена</a>

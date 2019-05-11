@@ -13,7 +13,7 @@
                 <th>Фамилия</th>
                 <th>Email</th>
                 <th>Телефон</th>
-                <th>Пароль</th>
+                <#--<th>Пароль</th>-->
                 <th>Доступ</th>
                 <th colspan="3">Действия</th>
             </tr>
@@ -27,12 +27,14 @@
                     <td>${User.surname}</td>
                     <td>${User.email}</td>
                     <td>${User.phone_number}</td>
-                    <td>${User.password}</td>
+                    <#--<td type="password" >${User.password}</td>-->
                     <td><#list User.userRoles as UserRole>${UserRole}</#list></td>
-                    <@menus.crudButtons "" ""/>
+                    <@menus.crudButtons "/addUser" "/delUser?id=${User.id}"/>
+                    <@menus.changeButton "/changeUser?id=${User.id}"/>
                 </tr>
             <#else>
-                <td colspan="12">Ничего не найдено</td>
+                <td colspan="7">Ничего не найдено</td>
+                <@menus.crudButtons "/addUser" "/users"/>
             </#list>
             </tbody>
         </table>
