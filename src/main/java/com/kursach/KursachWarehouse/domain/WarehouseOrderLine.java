@@ -12,19 +12,19 @@ public class WarehouseOrderLine {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(cascade={CascadeType.ALL})
     @JoinColumn(name="warehouseOrder_id")
     private WarehouseOrder warehouseOrder;
 
-    @ManyToOne
+    @ManyToOne(cascade={CascadeType.ALL})
     @JoinColumn(name="invent_id")
     private Invent invent;
 
-    @ManyToOne
+    @ManyToOne(cascade={CascadeType.ALL})
     @JoinColumn(name="startCell_id")
     private Cell startLocation;
 
-    @ManyToOne
+    @ManyToOne(cascade={CascadeType.ALL})
     @JoinColumn(name="finishCell_id")
     private Cell finishLocation;
 
@@ -40,7 +40,7 @@ public class WarehouseOrderLine {
     @Enumerated(EnumType.STRING)
     private Set<TaskStatus> putStatus;
 
-    @ManyToOne
+    @ManyToOne(cascade={CascadeType.ALL})
     @JoinColumn(name="user_id")
     private User user;
 

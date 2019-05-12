@@ -10,9 +10,8 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 public class WriteQR {
-    public static void WriteCode() {
+    public static void WriteCode(String qrCodeData) {
         try {
-            String qrCodeData = "U pilota est rabota AAAaan";
             String filePath = "QRcodeGen.png";
             String charset = "UTF-8"; // or "ISO-8859-1"
             Map < EncodeHintType, ErrorCorrectionLevel > hintMap = new HashMap < EncodeHintType, ErrorCorrectionLevel > ();

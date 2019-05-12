@@ -4,6 +4,7 @@ import com.kursach.KursachWarehouse.domain.Cell;
 import com.kursach.KursachWarehouse.domain.enums.CellStatus;
 import com.kursach.KursachWarehouse.repos.CellRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 
 @Controller
+@PreAuthorize("hasAuthority('ADMIN')")
 public class CellController {
     @Autowired
     private CellRepository CellRepo;

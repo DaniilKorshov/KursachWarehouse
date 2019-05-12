@@ -2,7 +2,7 @@
 <#import "parts/menus.ftl" as menus>
 
 <@common.page>
-    <@menus.adminNav/>
+    <@menus.userNav/>
     <@menus.tableHead "Таблица линий заказов" "Складской заказ" "/warehouseOrderLine"/>
     <div class="table-responsive" style="text-align: center;">
         <table class="table table-hover table-bordered ">

@@ -13,6 +13,29 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/choose_table">База данных</a>
                 </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <form action="/logout" method="post">
+                    <input type="hidden" name="_csrf" value="${_csrf.token}"> <!--Для безопасности-->
+                    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Сменить пользователя</button>
+                </form>
+            </ul>
+        </div>
+    </nav>
+</#macro>
+
+<#macro userNav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Warehouse</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/main">Личные данные</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/currentUserWarehouseOrderLine">Задания</a>
                 </li>
