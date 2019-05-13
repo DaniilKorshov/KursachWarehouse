@@ -13,6 +13,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/choose_table">База данных</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/QRcode">QR код</a>
+                </li>
             </ul>
             <ul class="nav navbar-nav ml-auto">
                 <form action="/logout" method="post">
@@ -38,6 +41,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/currentUserWarehouseOrderLine">Задания</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/QRcode">QR код</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav ml-auto">
