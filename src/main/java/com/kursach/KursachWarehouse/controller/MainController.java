@@ -2,9 +2,11 @@ package com.kursach.KursachWarehouse.controller;
 
 import com.kursach.KursachWarehouse.QRcode.WriteQR;
 import com.kursach.KursachWarehouse.domain.Invent;
+import com.kursach.KursachWarehouse.domain.InventSum;
 import com.kursach.KursachWarehouse.domain.User;
 import com.kursach.KursachWarehouse.domain.enums.UserRole;
 import com.kursach.KursachWarehouse.repos.InventRepository;
+import com.kursach.KursachWarehouse.repos.InventSumRepository;
 import com.kursach.KursachWarehouse.repos.UserRepo;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -34,6 +37,9 @@ public class MainController {
 
     @Autowired
     private InventRepository InventRepo;
+
+    @Autowired
+    private InventSumRepository InventSumRepo;
 
 
     @GetMapping("/")
@@ -96,7 +102,21 @@ public class MainController {
             e.printStackTrace();
         }
     }
+    @GetMapping("/inventSum")
+    public String inventSum(@RequestParam(required = false,defaultValue = "") String filter, Model model)
+    {
+        Iterable<InventSum> inventSums=InventSumRepo.findAll();
 
+        if (filter!=null&&!filter.isEmpty()){
+            inventSums=InventSumRepo.findByInvent_Id(Long.parseLong(filter));
+        }
+        else {
+            inventSums=InventSumRepo.findAll();
+        }
+        model.addAttribute("inventSums", inventSums);
+        model.addAttribute("filter",filter);
+        return "inventSum";
+    }
     @GetMapping("/choose_table")
     @PreAuthorize("hasAuthority('ADMIN')")
     public String choose_table(Map<String, Object> model) {

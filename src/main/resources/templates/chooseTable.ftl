@@ -12,7 +12,7 @@
     </div>
     <div class="container" style="padding-top: 3vh;">
         <div class="card-deck mb-3 text-center">
-            <@adminNav.tableBlock "Наличие" "Информация о количестве продукции и материалов" ""/>
+            <@adminNav.tableBlock "Наличие" "Информация о количестве продукции и материалов" "/inventSum"/>
             <@adminNav.tableBlock "Грузы" "Информация о продукции и материалах" "/invent"/>
             <@adminNav.tableBlock "Комплектации" "Информация о комплектациях продукции" "/dimGroup"/>
         </div>
