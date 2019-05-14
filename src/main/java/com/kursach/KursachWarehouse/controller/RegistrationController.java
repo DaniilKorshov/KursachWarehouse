@@ -16,24 +16,26 @@ import java.util.Map;
 public class RegistrationController {
     @Autowired
     private UserRepo userRepo;
+
     @GetMapping("/registration")
-    public String registration(){
+    public String registration() {
         return "registration";
     }
 
     @PostMapping("/registration")
-    public String addUser(User user, Map<String,Object> model){
+    public String addUser(User user, Map<String, Object> model) {
         User userFromDb = userRepo.findByEmail(user.getEmail());
-        List<User> checkAdmin=userRepo.findByUserRoles(UserRole.ADMIN);
-        if (userFromDb!=null){
-            model.put("message","Такой пользователь уже существует");
+        List<User> checkAdmin = userRepo.findByUserRoles(UserRole.ADMIN);
+        if (userFromDb != null) {
+            model.put("message", "Такой пользователь уже существует");
             return "registration";
         }
-        user.setActive(true);
-        if (checkAdmin.isEmpty()==true)
+       // user.setActive(true);
+        if (checkAdmin.isEmpty() == true)
             user.setUserRoles(Collections.singleton(UserRole.ADMIN));
         else
             user.setUserRoles(Collections.singleton(UserRole.USER));
+        user.setActive(true);
         userRepo.save(user);
         return "redirect:/login";
     }

@@ -52,7 +52,6 @@ public class UserController {
         return "redirect:/users";
     }
 
-
     @GetMapping("/addUser")
     public String addUser(Map<String,Object> model){
         model.put("tableName","Пользователи");
