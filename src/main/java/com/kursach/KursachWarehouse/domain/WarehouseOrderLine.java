@@ -1,6 +1,7 @@
 package com.kursach.KursachWarehouse.domain;
 
 import com.kursach.KursachWarehouse.domain.enums.TaskStatus;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -12,35 +13,37 @@ public class WarehouseOrderLine {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne(cascade={CascadeType.ALL})
+    @ManyToOne
     @JoinColumn(name="warehouseOrder_id")
     private WarehouseOrder warehouseOrder;
 
-    @ManyToOne(cascade={CascadeType.ALL})
+    @ManyToOne
     @JoinColumn(name="invent_id")
     private Invent invent;
 
-    @ManyToOne(cascade={CascadeType.ALL})
+    @ManyToOne
     @JoinColumn(name="startCell_id")
     private Cell startLocation;
 
-    @ManyToOne(cascade={CascadeType.ALL})
+    @ManyToOne
     @JoinColumn(name="finishCell_id")
     private Cell finishLocation;
 
     private Long qty;
 
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     @ElementCollection(targetClass = TaskStatus.class,fetch = FetchType.LAZY)
     @CollectionTable(name="take_status",joinColumns = @JoinColumn(name="warehouse_order_line_id"))
     @Enumerated(EnumType.STRING)
     private Set<TaskStatus> takeStatus;
 
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     @ElementCollection(targetClass = TaskStatus.class,fetch = FetchType.LAZY)
     @CollectionTable(name="put_status",joinColumns = @JoinColumn(name="warehouse_order_line_id"))
     @Enumerated(EnumType.STRING)
     private Set<TaskStatus> putStatus;
 
-    @ManyToOne(cascade={CascadeType.ALL})
+    @ManyToOne
     @JoinColumn(name="user_id")
     private User user;
 

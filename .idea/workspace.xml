@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="338a6b6e-2827-4d63-a4da-7d0026383a9b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/KursachWarehouse_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/QRcode/ReadQR.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/QRcode/WriteQR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/QRcode/WriteQR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QRcodeGen.png" beforeDir="false" afterPath="$PROJECT_DIR$/QRcodeGen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/WarehouseOrderLineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/WarehouseOrderLineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/InventSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/InventSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/WarehouseOrderLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/WarehouseOrderLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/WarehouseOrderLineRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/WarehouseOrderLineRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/currentUserWarehouseOrderLine.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/currentUserWarehouseOrderLine.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/menus.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/menus.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kursach/KursachWarehouse/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kursach/KursachWarehouse/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kursach/KursachWarehouse/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kursach/KursachWarehouse/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/warehouseOrderLine.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/warehouseOrderLine.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/WarehouseOrderLineController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="176" column="28" selection-start-line="176" selection-start-column="28" selection-end-line="176" selection-end-column="38" />
+            <state relative-caret-position="38">
+              <caret line="291" column="23" lean-forward="true" selection-start-line="291" selection-start-column="23" selection-end-line="291" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,54 +52,65 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/MainController.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/warehouseOrderLineChangeInfo.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+            <state relative-caret-position="527">
+              <caret line="31" column="81" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/currentUserWarehouseOrderLine.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2">
+              <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/menus.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="78" column="31" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/InventSumRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4102#4103#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/QRcode.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/WarehouseOrderLineRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/QRcodeUser.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+            <state relative-caret-position="204">
+              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
               <folding>
-                <element signature="n#style#0;n#h6#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/InventController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
-              <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/cellTableChangeInfo.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="340">
+              <caret line="88" column="32" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,6 +135,8 @@
       <find>users</find>
       <find>type</find>
       <find>ware</find>
+      <find>финишная ячейка занята</find>
+      <find>qwe</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,9 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Dimgroup.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/DimGroupRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Invent.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/enums/ItemType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/enums/UserRole.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/warehouseOrder.ftl" />
@@ -141,9 +154,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/enums/WarehouseOrderType.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/warehouseOrderChange.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/enums/TaskStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/warehouseOrderLine.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/InventRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/WarehouseOrderLineRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/WarehouseRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/warehouseTable.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/warehouseTableChange.ftl" />
@@ -163,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Cell.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/CellRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/WarehouseOrderRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/WarehouseOrderLine.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/WarehouseOrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/CellController.java" />
@@ -172,14 +182,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/WarehouseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/DimGroupController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/RegistrationController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/WarehouseOrderLineController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/mainUser.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/currentUserWarehouseOrderLine.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/menus.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/QRcode/WriteQR.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/QRcode.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/QRcodeUser.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/WarehouseOrderLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/WarehouseOrderLineRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/warehouseOrderLine.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/InventSum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/InventSumRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/menus.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/currentUserWarehouseOrderLine.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/warehouseOrderLineChangeInfo.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/WarehouseOrderLineController.java" />
       </list>
     </option>
   </component>
@@ -191,10 +207,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -202,7 +218,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,6 +335,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,16 +346,19 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557734811445" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557846749337" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.45024273" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.22758621" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kursach.KursachWarehouse.repos" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\KursachWarehouse\src\main\resources\templates" />
     </key>
@@ -416,7 +435,9 @@
       <workItem from="1557554071126" duration="33475000" />
       <workItem from="1557646124332" duration="9351000" />
       <workItem from="1557678422589" duration="2591000" />
-      <workItem from="1557726823664" duration="7798000" />
+      <workItem from="1557726823664" duration="12562000" />
+      <workItem from="1557811630679" duration="6051000" />
+      <workItem from="1557840283230" duration="5673000" />
     </task>
     <task id="LOCAL-00001" summary="Add QrCode">
       <created>1556393791373</created>
@@ -544,11 +565,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557656291901</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="QR">
+      <created>1557734842696</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1557734842696</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219748000" />
+    <option name="totallyTimeSpent" value="236236000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -563,7 +591,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49543378" visible="true" weight="0.2526475" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49543378" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" sideWeight="0.5042553" side_tool="true" weight="0.19894099" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -573,7 +601,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.32850242" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.78214824" visible="true" weight="0.45571658" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.78214824" visible="true" weight="0.3236715" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5754148" weight="0.34961832" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -598,7 +626,7 @@
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49543378" visible="true" weight="0.24130106" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49543378" visible="true" weight="0.19288956" />
       <window_info id="Structure" order="1" sideWeight="0.5042553" side_tool="true" weight="0.19894099" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -608,7 +636,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.32850242" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.78214824" visible="true" weight="0.34138486" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.78214824" weight="0.31400967" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5754148" weight="0.34961832" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -627,7 +655,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -689,47 +717,10 @@
     <MESSAGE value="6 table" />
     <MESSAGE value="user and cells change" />
     <MESSAGE value="admin/user" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin/user" />
+    <MESSAGE value="QR" />
+    <option name="LAST_COMMIT_MESSAGE" value="QR" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/warehouseOrderLine.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <marker date="1557413842605" expanded="true" signature="1146:1193" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/WarehouseRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/warehouseTableChange.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="122" selection-start-line="10" selection-start-column="122" selection-end-line="10" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/warehouseTable.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="71" selection-start-line="4" selection-start-column="71" selection-end-line="4" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -826,35 +817,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/warehouseOrderLineChange.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/enums/TaskStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/enums/CellStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userTableChangeInfo.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#input#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -875,27 +841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userTable.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/CellRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -913,17 +862,6 @@
           <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/WarehouseOrderLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#WarehouseOrderLine#0;class#WarehouseOrderLine#0" />
           </folding>
         </state>
       </provider>
@@ -980,44 +918,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/WarehouseOrderLineRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/currentUserWarehouseOrderLine.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mainUser.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/menus.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1038,40 +942,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/QRcode/ReadQR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/InventController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="54" column="19" lean-forward="true" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/WarehouseOrderLineController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="176" column="28" selection-start-line="176" selection-start-column="28" selection-end-line="176" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/QRcode/ReadQR.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/QRcode/WriteQR.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
@@ -1079,20 +950,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/cellTableChangeInfo.ftl">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.2.Final/hibernate-jpa-2.1-api-1.0.2.Final.jar!/javax/persistence/CascadeType.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/QRcodeUser.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#h6#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1105,11 +966,167 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+        <state relative-caret-position="146">
+          <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4066#4067#0" expanded="true" />
             <element signature="e#4102#4103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/QRcodeUser.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/cellTableChangeInfo.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userTable.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="36" column="57" lean-forward="true" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/warehouseOrderLineChange.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="91" column="45" lean-forward="true" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/warehouseOrderLine.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/enums/TaskStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userTableChangeInfo.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/InventSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/domain/WarehouseOrderLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#WarehouseOrderLine#0;class#WarehouseOrderLine#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/WarehouseOrderLineRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/InventController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="88" column="32" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/menus.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="78" column="31" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/repos/InventSumRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/warehouseOrderLineChangeInfo.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="81" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/currentUserWarehouseOrderLine.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kursach/KursachWarehouse/controller/WarehouseOrderLineController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="291" column="23" lean-forward="true" selection-start-line="291" selection-start-column="23" selection-end-line="291" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1120,11 +1137,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>KursachWarehouse:jar</last-edited>
+          <last-edited>KursachWarehouse:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.45024273" />
+                <option value="0.22758621" />
                 <option value="0.5" />
               </list>
             </option>

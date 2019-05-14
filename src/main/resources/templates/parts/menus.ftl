@@ -76,6 +76,11 @@
         </form>
     </div>
 </#macro>
+<#macro tableHeadUser tableName>
+    <div class="container-fluid">
+        <h1 class="page-header text-center">${tableName}</h1>
+    </div>
+</#macro>
 
 <#macro tableBlock tableName info action>
     <div class="card mb-4 box-shadow">

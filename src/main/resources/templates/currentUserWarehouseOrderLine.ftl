@@ -3,7 +3,7 @@
 
 <@common.page>
     <@menus.userNav/>
-    <@menus.tableHead "Таблица линий заказов" "Складской заказ" "/warehouseOrderLine"/>
+    <@menus.tableHeadUser "Таблица линий заказов"/>
     <div class="table-responsive" style="text-align: center;">
         <table class="table table-hover table-bordered ">
             <thead>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="KursachWarehouse:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/KursachWarehouse_war</output-path>
+    <root id="archive" name="KursachWarehouse_war.war">
+      <element id="artifact" artifact-name="KursachWarehouse:war exploded" />
+    </root>
+  </artifact>
+</component>

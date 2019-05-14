@@ -42,6 +42,9 @@ public class WarehouseOrderLineController {
     @Autowired
     private UserRepo UserRepoSecur;
 
+    @Autowired
+    private InventSumRepository InventSumRepo;
+
     @GetMapping("/warehouseOrderLine")
     public String warehouseOrderLine(@RequestParam(required = false, defaultValue = "") String filter, Model model) {
         Iterable<WarehouseOrderLine> warehouseOrderLines;
@@ -88,8 +91,19 @@ public class WarehouseOrderLineController {
         Set<WarehouseOrderType> orderTypeM=new HashSet<>();
         orderTypeM.add(WarehouseOrderType.MOVING);
 
+        Set<CellStatus> cellStatusE=new HashSet<>();
+        cellStatusE.add(CellStatus.EMPTY);
+
+        Set<CellStatus> cellStatusT=new HashSet<>();
+        cellStatusT.add(CellStatus.TAKEN);
+
+        Set<CellStatus> cellStatusR=new HashSet<>();
+        cellStatusR.add(CellStatus.RESERVED);
+
         if (WarehouseOrderRepo.findById(orderLine.getWarehouseOrder().getId()).isEmpty()||
-        InventRepo.findById(orderLine.getInvent().getId())==null||UserRepo.findById(orderLine.getUser().getId())==null)
+        InventRepo.findById(orderLine.getInvent().getId())==null||UserRepo.findById(orderLine.getUser().getId())==null||
+                CellRepo.findById(orderLine.getStartLocation().getId())==null||
+                        CellRepo.findById(orderLine.getFinishLocation().getId())==null)
         {
             model.put("tableName","Линии Складских заказов");
             model.put("action","/addWarehouseOrderLine");
@@ -106,7 +120,12 @@ public class WarehouseOrderLineController {
             }
             if (UserRepo.findById(orderLine.getUser().getId())==null) {
                 model.put("message", "Выбранного пользователя не существует");
-
+            }
+            if ( CellRepo.findById(orderLine.getStartLocation().getId())==null) {
+                model.put("message", "Стартовой ячейки не существует");
+            }
+            if (CellRepo.findById(orderLine.getFinishLocation().getId())==null) {
+                model.put("message", "Финишной ячейки не существует");
             }
             return "warehouseOrderLineChange";
         }
@@ -114,19 +133,9 @@ public class WarehouseOrderLineController {
 
         if (WarehouseOrderRepo.findAllById(orderLine.getWarehouseOrder().getId()).getType().equals(orderTypeS)) { //для shipment
             System.out.println("SHIPMent");
-            if (CellRepo.findById(orderLine.getStartLocation().getId()) == null) {
-                model.put("tableName","Линии Складских заказов");
-                model.put("action","/addWarehouseOrderLine");
-                model.put("crudName","Добавить");
-                model.put("StatusY", TaskStatus.YES);
-                model.put("StatusN",TaskStatus.NO);
-                model.put("message", "Стартовой ячейки не существует");
-                return "warehouseOrderLineChange";
-            }
-            else
-            {
-                if (CellRepo.findById(orderLine.getStartLocation().getId()).getCellStatus().equals(CellStatus.EMPTY)||
-                        CellRepo.findById(orderLine.getStartLocation().getId()).getCellStatus().equals(CellStatus.RESERVED))
+
+                if (CellRepo.findById(orderLine.getStartLocation().getId()).getCellStatus()==cellStatusE||
+                        CellRepo.findById(orderLine.getStartLocation().getId()).getCellStatus()==cellStatusR)
                 {
                     model.put("tableName","Линии Складских заказов");
                     model.put("action","/addWarehouseOrderLine");
@@ -138,25 +147,18 @@ public class WarehouseOrderLineController {
                 }
                 else
                 {
+                    Cell cell=CellRepo.findById(orderLine.getStartLocation().getId());
+                    cell.setCellStatus(cellStatusR);
+                    CellRepo.save(cell);
                     WarehouseOrderLineRepo.save(orderLine);
                     return "redirect:/warehouseOrderLine";
                 }
-            }
         }
         if (WarehouseOrderRepo.findAllById(orderLine.getWarehouseOrder().getId()).getType().equals(orderTypeR))  {
-            System.out.println("RECEIPT");
-            if (CellRepo.findById(orderLine.getFinishLocation().getId()) == null) {
-                model.put("tableName","Линии Складских заказов");
-                model.put("action","/addWarehouseOrderLine");
-                model.put("crudName","Добавить");
-                model.put("StatusY", TaskStatus.YES);
-                model.put("StatusN",TaskStatus.NO);
-                model.put("message", "Финишной ячейки не существует");
-                return "warehouseOrderLineChange";
-            }
-            else
-            {
-                if (!CellRepo.findById(orderLine.getFinishLocation().getId()).getCellStatus().equals(CellStatus.EMPTY))
+            Cell cell123=CellRepo.findById(orderLine.getFinishLocation().getId());
+            System.out.println("RECEIPT"+cell123.getCellStatus()+cellStatusR);
+                if (CellRepo.findById(orderLine.getFinishLocation().getId()).getCellStatus().equals(cellStatusR)||
+                        CellRepo.findById(orderLine.getFinishLocation().getId()).getCellStatus().equals(cellStatusT))
                 {
                     model.put("tableName","Линии Складских заказов");
                     model.put("action","/addWarehouseOrderLine");
@@ -168,37 +170,46 @@ public class WarehouseOrderLineController {
                 }
                 else
                 {
-                    Set<CellStatus> statuses=new HashSet<>();
-                    statuses.add(CellStatus.RESERVED);
                     Cell cell=CellRepo.findById(orderLine.getFinishLocation().getId());
-                    cell.setCellStatus(statuses);
+                    cell.setCellStatus(cellStatusR);
                     CellRepo.save(cell);
                     WarehouseOrderLineRepo.save(orderLine);
                     return "redirect:/warehouseOrderLine";
                 }
-            }
         }
         if (WarehouseOrderRepo.findAllById(orderLine.getWarehouseOrder().getId()).getType().equals(orderTypeM))  { //для moving
-            System.out.println("Moving");
-            if (CellRepo.findById(orderLine.getStartLocation().getId()) == null) {
-                model.put("tableName","Линии Складских заказов");
-                model.put("action","/addWarehouseOrderLine");
-                model.put("crudName","Добавить");
-                model.put("StatusY", TaskStatus.YES);
-                model.put("StatusN",TaskStatus.NO);
-                model.put("message", "Стартовой ячейки не существует");
-                return "warehouseOrderLineChange";
-            }
-            if (CellRepo.findById(orderLine.getFinishLocation().getId()) == null) {
-                model.put("tableName","Линии Складских заказов");
-                model.put("action","/addWarehouseOrderLine");
-                model.put("crudName","Добавить");
-                model.put("StatusY", TaskStatus.YES);
-                model.put("StatusN",TaskStatus.NO);
-                model.put("message", "Финишной ячейки не существует");
-                return "warehouseOrderLineChange";
 
+            if (CellRepo.findById(orderLine.getStartLocation().getId()).getCellStatus()==cellStatusE||
+                    CellRepo.findById(orderLine.getStartLocation().getId()).getCellStatus()==cellStatusR)
+            {
+                model.put("tableName","Линии Складских заказов");
+                model.put("action","/addWarehouseOrderLine");
+                model.put("crudName","Добавить");
+                model.put("StatusY", TaskStatus.YES);
+                model.put("StatusN",TaskStatus.NO);
+                model.put("message","Стартовая ячейка пуста");
+                return "warehouseOrderLineChange";
             }
+            if (CellRepo.findById(orderLine.getFinishLocation().getId()).getCellStatus().equals(cellStatusR)||
+                    CellRepo.findById(orderLine.getFinishLocation().getId()).getCellStatus().equals(cellStatusT))
+            {
+                model.put("tableName","Линии Складских заказов");
+                model.put("action","/addWarehouseOrderLine");
+                model.put("crudName","Добавить");
+                model.put("StatusY", TaskStatus.YES);
+                model.put("StatusN",TaskStatus.NO);
+                model.put("message","Финишная ячейка занята");
+                return "warehouseOrderLineChange";
+            }
+            Cell cell=CellRepo.findById(orderLine.getStartLocation().getId());
+            cell.setCellStatus(cellStatusR);
+            CellRepo.save(cell);
+
+            Cell cell1=CellRepo.findById(orderLine.getFinishLocation().getId());
+            cell1.setCellStatus(cellStatusR);
+            CellRepo.save(cell1);
+
+            System.out.println("Moving");
             WarehouseOrderLineRepo.save(orderLine);
             return "redirect:/warehouseOrderLine";
         }
@@ -209,6 +220,74 @@ public class WarehouseOrderLineController {
         model.put("StatusN",TaskStatus.NO);
         model.put("message", "Проверьте введенные данные    ");
         return "warehouseOrderLineChange";
+    }
+    @GetMapping("/changeWarehouseOrderLine")
+    public String changeWarehouseOrderLine(@RequestParam (name="id",required = false,defaultValue = "0") Long ID,Map<String,Object> model,Model model2){
+        WarehouseOrderLine warehouseOrderLine=WarehouseOrderLineRepo.findById(ID);
+        model2.addAttribute("ThisWOL",warehouseOrderLine);
+        model.put("tableName","Линии Складских заказов");
+        model.put("action","/changeWarehouseOrderLine");
+        model.put("message", "Введите данные");
+        model.put("crudName","Изменить");
+        model.put("StatusY", TaskStatus.YES);
+        model.put("StatusN",TaskStatus.NO);
+        return "warehouseOrderLineChangeInfo";
+    }
+
+    @Transactional
+    @PostMapping("/changeWarehouseOrderLine")
+    public String changeWarehouseOrderLine(WarehouseOrderLine orderLine,Map<String,Object> model,Model model2)
+    {
+        Cell cell=new Cell();
+        Set<TaskStatus> taskStatusY=new HashSet<>();
+        taskStatusY.add(TaskStatus.YES);
+
+        Set<TaskStatus> taskStatusN=new HashSet<>();
+        taskStatusN.add(TaskStatus.NO);
+
+        Set<WarehouseOrderType> orderTypeS=new HashSet<>();
+        orderTypeS.add(WarehouseOrderType.SHIPMENT);
+
+        Set<WarehouseOrderType> orderTypeR=new HashSet<>();
+        orderTypeR.add(WarehouseOrderType.RECEIPT);
+
+        Set<WarehouseOrderType> orderTypeM=new HashSet<>();
+        orderTypeM.add(WarehouseOrderType.MOVING);
+
+        Set<CellStatus> cellStatusE=new HashSet<>();
+        cellStatusE.add(CellStatus.EMPTY);
+
+        Set<CellStatus> cellStatusT=new HashSet<>();
+        cellStatusT.add(CellStatus.TAKEN);
+
+        Set<CellStatus> cellStatusR=new HashSet<>();
+        cellStatusR.add(CellStatus.RESERVED);
+
+        if (WarehouseOrderRepo.findAllById(orderLine.getWarehouseOrder().getId()).getType().equals(orderTypeS)){
+            if (orderLine.getTakeStatus().equals(taskStatusY)) {
+                cell = CellRepo.findById(orderLine.getStartLocation().getId());
+                cell.setCellStatus(cellStatusE);
+                CellRepo.save(cell);
+                InventSumRepo.deleteById(InventSumRepo.findByCell_Id(cell.getId()).getId());
+            }
+        }
+        if (WarehouseOrderRepo.findAllById(orderLine.getWarehouseOrder().getId()).getType().equals(orderTypeR)){
+            if (orderLine.getPutStatus().equals(taskStatusY)){
+                cell = CellRepo.findById(orderLine.getFinishLocation().getId());
+                cell.setCellStatus(cellStatusT);
+                CellRepo.save(cell);
+
+                InventSum inventSum=new InventSum();
+                inventSum.setCell(orderLine.getFinishLocation());
+                inventSum.setInvent(orderLine.getInvent());
+                inventSum.setQty(orderLine.getQty());
+                InventSumRepo.save(inventSum);
+            }
+        }
+        if (WarehouseOrderRepo.findAllById(orderLine.getWarehouseOrder().getId()).getType().equals(orderTypeM)){}
+
+        WarehouseOrderLineRepo.save(orderLine);
+        return "redirect:/warehouseOrderLine";
     }
     @GetMapping("/currentUserWarehouseOrderLine")
     @PreAuthorize("hasAuthority('USER')")

@@ -17,7 +17,7 @@
                 <th>Куда</th>
                 <th>Груз забран</th>
                 <th>Груз доставлен</th>
-                <th colspan="2">Действия</th>
+                <th colspan="3">Действия</th>
             </tr>
             </thead>
             <tbody>
@@ -34,6 +34,7 @@
                     <td><#list WarehouseOrderLine.takeStatus as TaskStatus>${TaskStatus}</#list></td>
                     <td><#list WarehouseOrderLine.putStatus as TaskStatus>${TaskStatus}</#list></td>
                     <@menus.crudButtons "/addWarehouseOrderLine" "/delWarehouseOrderLine?id=${WarehouseOrderLine.id}"/>
+                    <@menus.changeButton "/changeWarehouseOrderLine?id=${WarehouseOrderLine.id}"/>
                 </tr>
             <#else>
                 <td colspan="9">Ничего не найдено</td>
