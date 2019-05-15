@@ -284,7 +284,18 @@ public class WarehouseOrderLineController {
                 InventSumRepo.save(inventSum);
             }
         }
-        if (WarehouseOrderRepo.findAllById(orderLine.getWarehouseOrder().getId()).getType().equals(orderTypeM)){}
+        if (WarehouseOrderRepo.findAllById(orderLine.getWarehouseOrder().getId()).getType().equals(orderTypeM)){
+            if (orderLine.getTakeStatus().equals(taskStatusY)) {
+                cell = CellRepo.findById(orderLine.getStartLocation().getId());
+                cell.setCellStatus(cellStatusE);
+                CellRepo.save(cell);
+            }
+            if (orderLine.getPutStatus().equals(taskStatusY)){
+                cell = CellRepo.findById(orderLine.getFinishLocation().getId());
+                cell.setCellStatus(cellStatusT);
+                CellRepo.save(cell);
+            }
+        }
 
         WarehouseOrderLineRepo.save(orderLine);
         return "redirect:/warehouseOrderLine";

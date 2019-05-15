@@ -30,12 +30,12 @@ public class RegistrationController {
             model.put("message", "Такой пользователь уже существует");
             return "registration";
         }
-       // user.setActive(true);
+       user.setActive(true);
         if (checkAdmin.isEmpty() == true)
             user.setUserRoles(Collections.singleton(UserRole.ADMIN));
         else
             user.setUserRoles(Collections.singleton(UserRole.USER));
-        user.setActive(true);
+
         userRepo.save(user);
         return "redirect:/login";
     }
