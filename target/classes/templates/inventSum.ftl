@@ -8,8 +8,8 @@
         <table class="table table-hover table-bordered ">
             <thead>
             <tr>
-                <th scope="row">#</th>
-                <th>ID груза</th>
+
+                <th>Груз</th>
                 <th>ID ячейки</th>
                 <th>Количество</th>
             </tr>
@@ -18,10 +18,9 @@
 
             <#list inventSums as InventSum>
                 <tr>
-                    <th scope="row">${InventSum.id}</th>
-                    <td>${InventSum.invent.id}</td>
+                    <td>${InventSum.invent.name}</td>
                     <td>${InventSum.cell.id}</td>
-                    <td>${InventSum.qty}</td>
+                    <td>${InventSum.qty} ${InventSum.invent.unit}</td>
                 </tr>
             <#else>
                 <td colspan="5">Ничего не найдено</td>

@@ -36,7 +36,7 @@
                     <@menus.changeButton "/changeWarehouseOrderLine?id=${WarehouseOrderLine.id}"/>
                 </tr>
             <#else>
-                <td colspan="9">Ничего не найдено</td>
+                <td colspan="10">Ничего не найдено</td>
             </#list>
             </tbody>
         </table>

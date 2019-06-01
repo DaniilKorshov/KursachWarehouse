@@ -33,12 +33,12 @@
                     <td>${WarehouseOrderLine.finishLocation.getId()}</td>
                     <td><#list WarehouseOrderLine.takeStatus as TaskStatus>${TaskStatus}</#list></td>
                     <td><#list WarehouseOrderLine.putStatus as TaskStatus>${TaskStatus}</#list></td>
-                    <@menus.crudButtons "/addWarehouseOrderLine" "/delWarehouseOrderLine?id=${WarehouseOrderLine.id}"/>
+                    <@menus.crudButtons "/chooseWarehouseOrderType" "/delWarehouseOrderLine?id=${WarehouseOrderLine.id}"/>
                     <@menus.changeButton "/changeWarehouseOrderLine?id=${WarehouseOrderLine.id}"/>
                 </tr>
             <#else>
                 <td colspan="9">Ничего не найдено</td>
-                <@menus.crudButtons "/addWarehouseOrderLine" "/warehouseOrderLine"/>
+                <@menus.crudButtons "/chooseWarehouseOrderType" "/warehouseOrderLine"/>
             </#list>
             </tbody>
         </table>

@@ -7,8 +7,8 @@
         <input class="form-control" name="warehouseOrder.id" placeholder="ID складского заказа" style="margin-bottom: 3vh;">
         <input class="form-control" name="invent.id" placeholder="ID груза" style="margin-bottom: 3vh;">
         <input class="form-control" name="qty" placeholder="Количество" style="margin-bottom: 3vh;">
-        <input class="form-control" name="startLocation.id" placeholder="ID стартовой ячейки" style="margin-bottom: 3vh;">
-        <input class="form-control" name="finishLocation.id" placeholder="ID финишной ячейки" style="margin-bottom: 3vh;">
+        <input class="form-control" ${ROnly1} name="startLocation.id" value="${DefValue1}" placeholder="ID стартовой ячейки" style="margin-bottom: 3vh;">
+        <input class="form-control" ${ROnly2} name="finishLocation.id" value="${DefValue2}" placeholder="ID финишной ячейки" style="margin-bottom: 3vh;">
         <input class="form-control" name="user.id" placeholder="ID выполняющего" style="margin-bottom: 3vh;">
         <p>Статус отборки</p>
         <select class="form-control" name="takeStatus" placeholder="Статус отборки" style="margin-bottom: 3vh;">
